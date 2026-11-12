@@ -1,12 +1,10 @@
-# DA-pet-proj
+# Data Analytic pet projects
 
-Data Analytic pet projects
+Short descriptions of the projects.
 
-## 1. Intro to Linux
+## 1. Data Engineering and Data Analysis Methods 
 
-Examples of the scripts in bash.
-
-## 2. Data Engineering and Data Analysis Methods 
+[data_methods README.md](./data_methods/README.md)
 
 Designed and implemented a complete end-to-end pipeline from a custom business scenario to an analytical data mart, including:
 
