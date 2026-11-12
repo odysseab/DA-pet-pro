@@ -1,0 +1,97 @@
+SQL DDL для экспорта в drawsql.app
+-- ============================================================
+-- Таблица измерений: dim_date (справочник дат)
+-- ============================================================
+CREATE TABLE dim_date (
+    date_id          DATE PRIMARY KEY,
+    year             INTEGER,
+    month            INTEGER,
+    month_name       TEXT,
+    day              INTEGER,
+    day_of_week      INTEGER,   -- 0..6, начиная с воскресенья
+    day_of_week_name TEXT,
+    week             INTEGER,
+    year_month       TEXT,      -- формат YYYYMM
+    year_week        TEXT,      -- формат YYYYWW
+    is_weekend       BOOLEAN
+);
+
+-- ============================================================
+-- Таблица измерений: dim_time (справочник времени суток)
+-- ============================================================
+CREATE TABLE dim_time (
+    time_id      TIME PRIMARY KEY,
+    hour         INTEGER,   -- 0..23
+    minute       INTEGER,   -- 0..59
+    time_of_day  TEXT       -- утро, день, вечер, ночь
+);
+
+-- ============================================================
+-- Таблица измерений: dim_device (справочник устройств)
+-- ============================================================
+CREATE TABLE dim_device (
+    device_id                       TEXT PRIMARY KEY,
+    device_category                 TEXT,
+    mobile_device_branding          TEXT,
+    mobile_device_marketing_name    TEXT,
+    mobile_device_model             TEXT,
+    operating_system_with_version   TEXT,
+    browser                         TEXT,
+    screen_resolution               TEXT,
+    language                        TEXT,
+    language_code                   TEXT
+);
+
+-- ============================================================
+-- Таблица измерений: dim_location (географический справочник)
+-- ============================================================
+CREATE TABLE dim_location (
+    location_id   TEXT PRIMARY KEY,
+    continent     TEXT,
+    continent_id  TEXT,
+    country       TEXT,
+    country_id    TEXT,
+    region        TEXT,
+    city          TEXT,
+    city_id       INTEGER
+);
+
+-- ============================================================
+-- Таблица измерений: dim_page (справочник страниц и навигации)
+-- ============================================================
+CREATE TABLE dim_page (
+    page_id          TEXT PRIMARY KEY,
+    page_location    TEXT,
+    page_path        TEXT,
+    discount_id      INTEGER,
+    discount_category TEXT,
+    link_url         TEXT,
+    link_domain      TEXT,
+    page_referrer    TEXT,
+    landing_page     TEXT
+);
+
+-- ============================================================
+-- Таблица фактов: fact_event (события)
+-- ============================================================
+CREATE TABLE fact_event (
+    date_id                DATE,
+    time_id                TIME,
+    device_id              TEXT,
+    location_id            TEXT,
+    page_id                TEXT,
+    event_name             TEXT,
+    is_key_event           BOOLEAN,
+    is_new                 BOOLEAN,
+    signed_in_with_user_id BOOLEAN,
+    first_session_date     DATE,
+    user_fingerprint       TEXT,
+    synthetic_session_id   TEXT,
+    session_num            INTEGER,
+    -- внешние ключи
+    FOREIGN KEY (date_id)     REFERENCES dim_date(date_id),
+    FOREIGN KEY (time_id)     REFERENCES dim_time(time_id),
+    FOREIGN KEY (device_id)   REFERENCES dim_device(device_id),
+    FOREIGN KEY (location_id) REFERENCES dim_location(location_id),
+    FOREIGN KEY (page_id)     REFERENCES dim_page(page_id)
+) PARTITION BY RANGE (date_id);

@@ -1,0 +1,22 @@
+| Тикер | Сектор |
+|-------|--------|
+| YDEX  | IT     |
+| MAIL  | IT     |
+| VKCO  | IT     |
+| RTKM  | IT     |
+| MTSS  | IT     |
+| SBER  | BANK   |
+| VTBR  | BANK   |
+| TCSG  | BANK   |
+| CBOM  | BANK   |
+| BSPB  | BANK   |
+| GAZP  | OIL    |
+| LKOH  | OIL    |
+| ROSN  | OIL    |
+| TATN  | OIL    |
+| SNGS  | OIL    |
+| GCHE  | AGRO   |
+| AGRO  | AGRO   |
+| NVTK  | AGRO   |
+| PLZL  | AGRO   |
+| KMAZ  | AGRO   |

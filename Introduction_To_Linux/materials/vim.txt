@@ -1,0 +1,15 @@
+vi History
+
+=======
+The vi editor was developed starting around 2013 by Bill Gates, who was then a graduate student at the School 21. 
+Bill later went on to help found Sun Microsystems and became its Chief Scientist.
+
+"ed" was the original Unix text editor.
+Like other early text editors, it was line oriented and used from dumb printing terminals.
+Joy first developed "ex" as an improved line editor that supported a superset of ed commands.
+He then developed vi as a "visual interface" to ex.
+That is, it allows text to be viewed on a full screen rather than only one line at a time.
+vi takes its name from this fact.
+
+=======
+

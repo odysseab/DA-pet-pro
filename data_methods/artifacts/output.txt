@@ -1,0 +1,31 @@
+Hello, file!
+cityId: string
+dateHourMinute: string
+firstSessionDate: string
+pageLocation: string
+eventName: string
+screenResolution: string
+city: string
+browser: string
+continent: string
+continentId: string
+country: string
+countryId: string
+deviceCategory: string
+deviceModel: string
+isKeyEvent: string
+landingPagePlusQueryString: string
+language: string
+languageCode: string
+linkUrl: string
+mobileDeviceBranding: string
+mobileDeviceMarketingName: string
+mobileDeviceModel: string
+newVsReturning: string
+operatingSystemWithVersion: string
+pageReferrer: string
+region: string
+signedInWithUserId: string
+-- schema metadata --
+org.apache.spark.version: '4.0.2'
+org.apache.spark.sql.parquet.row.metadata: '{"type":"struct","fields":[{"' + 1911
