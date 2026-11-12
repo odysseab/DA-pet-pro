@@ -12,3 +12,10 @@ Designed and implemented a complete end-to-end pipeline from a custom business s
 - Selection of architectural solutions
 - Physical implementation across different DBMSs
 - Data preparation for analytics and reporting
+
+
+## 2. Greenplum
+
+[greenplum README.md](./greenplum/README.md)
+
+text text
