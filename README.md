@@ -23,3 +23,7 @@ text text
 ## 3. Hadoop
 
 [hadoop README.md](./hadoop/README.md)
+
+## 4. Kafka & Airflow
+
+[kafka & airflow README.md](./kafka_airflow/README.md)
