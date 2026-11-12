@@ -27,3 +27,13 @@ text text
 ## 4. Kafka & Airflow
 
 [kafka & airflow README.md](./kafka_airflow/README.md)
+
+## 5. Power BI & Superset
+
+[power_bi](./power_bi_practice/README.md)
+
+[superset](./superset_practice/README.md)
+
+## 6. Excel
+
+[excel](./excel/README.md)
