@@ -19,3 +19,7 @@ Designed and implemented a complete end-to-end pipeline from a custom business s
 [greenplum README.md](./greenplum/README.md)
 
 text text
+
+## 3. Hadoop
+
+[hadoop README.md](./hadoop/README.md)
